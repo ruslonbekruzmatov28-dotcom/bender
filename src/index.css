@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "Amiri", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#042f2e] text-emerald-50;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .arabic-font {
+    font-family: var(--font-arabic);
+    direction: rtl;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-duration: 400ms;
+}
+
+/* Hide number input arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Telegram Safe Area Utilities */
+.safe-top {
+  padding-top: var(--tg-safe-area-inset-top, 0px);
+}
+
+.safe-bottom {
+  padding-bottom: var(--tg-safe-area-inset-bottom, 0px);
+}
+
+.safe-left {
+  padding-left: var(--tg-safe-area-inset-left, 0px);
+}
+
+.safe-right {
+  padding-right: var(--tg-safe-area-inset-right, 0px);
+}

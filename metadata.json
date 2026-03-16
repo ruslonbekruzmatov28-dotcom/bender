@@ -1,0 +1,5 @@
+{
+  "name": "Ramazon 2026 — Xorazm",
+  "description": "Xorazm viloyati uchun Ramazon taqvimi, duolar va AI yordamchi.",
+  "requestFramePermissions": ["geolocation"]
+}
