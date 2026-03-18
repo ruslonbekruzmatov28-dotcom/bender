@@ -13,7 +13,6 @@ const __dirname = path.dirname(__filename);
 
 // Konfiguratsiya
 const TELEGRAM_TOKEN = "8281590873:AAGvR3YKrdndCbRqWX8q5qyviYJr4E3Hmf0";
-const GROQ_API_KEY = "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";
 const WEATHER_API_KEY = "de28ee309cdd4e9b0130ecccfb4d1b03";
 
 const bot = new Telegraf(TELEGRAM_TOKEN);
